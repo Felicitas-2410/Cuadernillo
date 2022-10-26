@@ -1,0 +1,63 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace cuadernill_ejercicio
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            int a,x=0;
+            double b,pf=0,p=0;
+            Console.WriteLine("TIENDA MODATELAS");
+            Console.WriteLine("¿cual es el precio de la tela por metro?");
+            b = double.Parse(Console.ReadLine());
+            Console.WriteLine("¿cuantos metros de tela desea comprar?");
+            a = int.Parse(Console.ReadLine());
+            if (a <= 0)
+            {
+                Console.WriteLine("VERIFIQUE QUE LOS DATOS SEAN CORRECTOS!!!");
+            }
+            else
+            {
+                if (a >= 1 && a <= 3)
+                {
+                    x = 8;
+                    p = (a * b);
+                    pf = p - (p * 8 / 100);
+                }
+                else
+                {
+                    if (a >= 4 && a <= 7)
+                    {
+                        x = 14;
+                        p = (a * b);
+                        pf = p - (p * 14 / 100);
+                    }
+                    else
+                    {
+                        if (a >= 8)
+                        {
+                            x = 21;
+                            p = (a * b);
+                            pf = p - (p * 21 / 100);
+                            a = a + 1;
+                        }
+                        else
+                        {
+                            Console.WriteLine("VERIFIQUE QUE LOS DATOS SEAN CORRECTOS!!!");
+                        }
+                    }
+                }
+              Console.WriteLine("EL PRECIO POR "+a+" METROS DE TELA ES DE " + p + " Y OBTENDRA UN DESCUENTO DE " + x + "%");
+              Console.WriteLine(" EL PRECIO FINAL A PAGAR ES DE $" + pf);
+              Console.ReadKey();
+            }
+        }
+    }
+}
+
