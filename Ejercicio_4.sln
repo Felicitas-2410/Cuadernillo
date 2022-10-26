@@ -1,0 +1,30 @@
+using System;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EJERCICIO1_CUADERNILLO
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //declarar variables
+            int art;
+
+            //entrada
+            Console.WriteLine("Ingrese la cantidad de articulos comprados ");
+            art = int.Parse(Console.ReadLine());
+
+            if (art < 3)
+            {
+                Console.WriteLine("Pagar con Efectivo");
+            }
+            else
+            {
+                Console.WriteLine("Pagar con Tarjeta");
+            }
+
+        }
+    }
+}
