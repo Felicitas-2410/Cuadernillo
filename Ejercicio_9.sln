@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace envio
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            double a, b, x = 0,d=0;
+            Console.WriteLine("COSTO DE ENVIO DE MEXICO A USA");
+            Console.WriteLine("Ingrese el peso de la caja");
+            a = double.Parse(Console.ReadLine());
+            Console.WriteLine("ingrese el costo del envio");
+            b = double.Parse(Console.ReadLine());
+            if(a >= 10)
+            {
+                d = b-(b * .17);
+                x = a * d;
+            }
+            else 
+            {
+                x = a * b;
+            }
+            Console.WriteLine("costo por el envio sera de "+x);
+            Console.ReadKey();
+        }
+    }
+}
