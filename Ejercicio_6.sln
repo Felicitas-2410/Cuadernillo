@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EJERCICIO2_CUADERNILLO
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            //declarar variables
+            double a, b, c, promedio;
+
+            //entrada
+            Console.WriteLine("Escribe las tres calificaciones: ");
+            a = Double.Parse(Console.ReadLine());
+            b = Double.Parse(Console.ReadLine());
+            c = Double.Parse(Console.ReadLine());
+
+            //proceso y salida
+            promedio = (a + b + c) / 3;
+
+            if (promedio >= 70)
+            {
+                Console.WriteLine("Tu promedio es: " + promedio + " aprobaste la materia");
+            }
+            else
+            {
+                Console.WriteLine("Tu promedio es: " + promedio + " no aprobaste la materia");
+            }
+        }
+    }
+}
