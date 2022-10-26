@@ -1,0 +1,71 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Cryptography.X509Certificates;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace taxi
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            char opcion;
+            int a;
+            double b=0,x=0;
+            Console.WriteLine("DETERMINAR EL COBRO DE VIAJE");
+            Console.WriteLine("los siguientes lugares se puede viajar");
+            Console.WriteLine(" T - TEPEMAXAC ");
+            Console.WriteLine(" C - CLACHOCOTIPA");
+            Console.WriteLine(" P - PASTORA ");
+            Console.WriteLine(" M - HUEJUTLA");
+            Console.WriteLine(" D - IXCATLAN");
+            Console.WriteLine("QUE LUGAR DESEA IR");
+            opcion = char.Parse(Console.ReadLine());
+            if (opcion == 'T' || opcion == 'C' || opcion == 'P' || opcion == 'M' || opcion == 'D' || opcion == 'c' || opcion == 'p' || opcion == 'm' || opcion == 'd' || opcion == 't')
+            {
+                Console.WriteLine("ingresa la cantidad de personas que van a viajar");
+                a = int.Parse(Console.ReadLine());
+                switch (opcion)
+                {
+                    case 'T':
+                    case 't':
+                        x = 23.5;
+                        b = a * x;
+                        break;
+                    case 'C':
+                    case 'c':
+                        x = 27;
+                        b = a * x;
+                        break;
+                    case 'P':
+                    case 'p':
+                        x = 33.5;
+                        b = a * x;
+                        break;
+                    case 'M':
+                    case 'm':
+                        x = 43.5;
+                        b = a * x;
+                        break;
+                    case 'D':
+                    case 'd':
+                        x = 17.6;
+                        b = a * x;
+                        break;
+                }
+                Console.WriteLine("EL COBRO POR " + a + " SERA DE $" + b);
+                Console.WriteLine("CADA PERSONA PAGARA $" + x);
+
+            
+        }
+            else
+            {
+                Console.WriteLine("VERIFICAR QUE LA OPCION SEA CORRECTA!!!");
+            }
+
+    Console.ReadKey();
+        }
+    }
+}
