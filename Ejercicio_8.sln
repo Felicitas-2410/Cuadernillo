@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.NetworkInformation;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace etado_civil
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            char ECIVIL;
+            Console.Write("escribir C,S,V,D :"); 
+            ECIVIL = char.Parse(Console.ReadLine());
+
+            switch (ECIVIL)
+            {
+                case 'C':
+                    ; Console.WriteLine("CASADO");
+                    break;
+                case 'S':
+                    ; Console.WriteLine("SOLTERO");
+                    break;
+                case 'V':
+                    ; Console.WriteLine("VIUDO");
+                    break;
+                case 'D':
+                    ; Console.WriteLine("DIVORCIADO");
+                    break;
+                default:
+
+                    Console.WriteLine("NO EXISTE");
+                    break;
+            } 
+            Console.ReadLine();
+        }
+    }
+}
