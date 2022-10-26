@@ -1,0 +1,71 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ahorro
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        { 
+            int a,x;
+            double c,b=0,d=0;
+            Console.WriteLine("TERMINAR EL BONO POR MAS HORAS TRABAJADAS");
+            Console.WriteLine("¿HORAS EXTRAS TRABAJADAS?");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("¿CUAL ES SU SALARIO NORMAL?");
+            c= double.Parse(Console.ReadLine());   
+            if (a <= 0)
+            { 
+                Console.WriteLine("POR TRABAJAR "+a+" HORAS SU SALARIO SERA NORMAL DE "+c);
+            }
+            else
+            {
+                    if (a <= 2)
+                    {
+                        x = 52;
+                    d= (a * x);
+                    b = c + d;
+                            
+                    }
+                    else
+                    {
+                        if (a == 3)
+                        {
+                            x = 63;
+                        d= (a * x);
+                        b = c + d;
+
+                        }
+                        else
+                        {
+                            if (a == 4)
+                            {
+                                x = 76;
+                            d= (a * x);
+                            b = c + d;
+
+                            }
+                            else
+                            {
+                                x = 90;
+                             d= (a * x);
+                             b = c + d;
+                                
+                            }
+
+
+                        }
+                    }
+                
+                Console.WriteLine("EL BONO SERA DE $" +x+" POR CADA HORA TRABAJADA ASIENDO UN TOTAL DE $"+d);
+                Console.WriteLine("EL TRABAJO DE "+a+ " HORAS, ASI SU SALARIO FINAL SERA DE "+b);
+
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
