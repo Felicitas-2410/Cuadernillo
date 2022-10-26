@@ -1,0 +1,69 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace COMPRA
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            char opcion;
+            int a;
+            double b = 0, x = 0;
+            Console.WriteLine("VENTA DE DULCES ");
+            Console.WriteLine(" P - PALETAS ");
+            Console.WriteLine(" C - CHICHARRONES");
+            Console.WriteLine(" J - JUGOS ");
+            Console.WriteLine(" G - GOMITAS");
+            Console.WriteLine(" X - CHICLES");
+            Console.WriteLine("que tipo de dulce desea comprar");
+            opcion = char.Parse(Console.ReadLine());
+            if (opcion == 'P' || opcion == 'C' || opcion == 'J' || opcion == 'G' || opcion == 'X' || opcion == 'p' || opcion == 'c' || opcion == 'j' || opcion == 'g' || opcion == 'x')
+            {
+                Console.WriteLine("¿cuantos paquetes de dulces que desea comprar?");
+                a = int.Parse(Console.ReadLine());
+                switch (opcion)
+                {
+                    case 'P':
+                    case 'p':
+                        x = 86.5;
+                        b = a * x;
+                        break;
+                    case 'C':
+                    case 'c':
+                        x = 94.5;
+                        b = a * x;
+                        break;
+                    case 'J':
+                    case 'j':
+                        x = 120;
+                        b = a * x;
+                        break;
+                    case 'G':
+                    case 'g':
+                        x = 55.8;
+                        b = a * x;
+                        break;
+                    case 'X':
+                    case 'x':
+                        x = 32;
+                        b = a * x;
+                        break;
+                }
+                Console.WriteLine("pagara un total de $"+b);
+                Console.WriteLine("el precio de cada paquete sera de $" + x);
+
+
+            }
+            else
+            {
+                Console.WriteLine("VERIFICAR QUE LA OPCION SEA CORRECTA!!!");
+            }
+
+            Console.ReadKey();
+        }
+    }
+}
